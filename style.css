@@ -13,12 +13,47 @@ padding: 0;
     display: flex; justify-content: center;flex-wrap: wrap;
 /* margin-bottom:100px; */
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 1440px) {
     .input {
-   width:180px;
+   width:400px;
     }
   }
-  @media screen and (max-width: 230px) {
+  @media screen and (max-width: 447px) {
+    .input {
+   width:300px;
+    }
+  }
+  @media screen and (max-width: 561px) {
+    .input {
+   width:250px;
+    }
+  }
+  @media screen and (max-width: 397px) {
+    .input {
+   width:200px;
+    }
+  }
+  @media screen and (max-width: 355px) {
+    .input {
+   width:150px;
+    }
+  }
+  @media screen and (max-width: 309px) {
+    .input {
+   width:110px;
+    }
+  }
+  @media screen and (max-width: 303px) {
+    .input {
+   width:80px;
+    }
+  }
+@media screen and (max-width: 300px) {
+    .input {
+   width: 30px;
+    }
+  }
+  /* @media screen and (max-width: 230px) {
     .input {
    width:100px;
     }
@@ -32,7 +67,7 @@ padding: 0;
     .input {
    width:20px;
     }
-  }
+  } */
 .input{
     padding: 20px;
     border-radius: 10px;
