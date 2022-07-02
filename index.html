@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="head">Weather App</h1>
+    <div class="input1">
+        <form onsubmit="Sub(); return false"><input placeholder="Enter your city name" type="text" name="" id="input1"
+                class="input"></form>
+    </div>
+    <div id="temp"></div>
+    <div class="cityCondition">
+        <div id="cityName"></div>
+        <div id="condition"></div>
+    </div>
+
+    <!-- <div id="min"></div> -->
+    <!-- <div id="max"></div> -->
+    <div class="cento1">
+        <div class="cento" id="precip"></div>
+        <div class="cento" id="humidity"></div>
+        <div class="cento" id="wind"></div>
+        <div class="cento" id="visibility"></div>
+    </div>
+    <script>
+        function Sub() {
+            let input1 = document.querySelector('#input1').value;
+            console.log(input1);
+            if (Number(input1)) {
+                alert('Please Enter a Valid City Name')
+            }
+            axios.get(`http://api.weatherapi.com/v1/current.json?key=ecfc6eab7b3c493a9a1194300223006&q=${input1}`)
+                .then(function (response) {
+                    console.log(response.data);
+                    // handle success
+                    let cityName = response.data.location.name;
+                    document.querySelector('#cityName').innerHTML = cityName;
+
+                    let war = `${response.data.current.temp_c} °C`;
+                    console.log(war);
+                    document.querySelector('#temp').innerHTML = war;
+
+                    let war1 = response.data.current.condition.text;
+                    document.querySelector('#condition').innerHTML = war1;
+
+                    let war2 = `Humidity: ${response.data.current.humidity}%`;
+                    document.querySelector('#humidity').innerHTML = war2;
+
+                    let war3 = `Wind: ${response.data.current.wind_kph} km/h`;
+                    document.querySelector('#wind').innerHTML = war3;
+
+                    let war4 = `Vsibility: ${response.data.current.vis_km} km`;
+                    document.querySelector('#visibility').innerHTML = war4;
+
+                    let war5 = `Precipitation: ${response.data.current.precip_in}%`;
+                    document.querySelector('#precip').innerHTML = war5;
+
+
+
+                })
+
+
+
+
+
+
+
+
+
+
+        } 
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+margin-top: 0;
+padding: 0;
+}
+.head{
+    color: white;
+    background-color: black;
+    margin-top: 0;
+    padding:15px;
+}
+.input1{
+    display: flex; justify-content: center;
+/* margin-bottom:100px; */
+}
+.input{
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#temp{
+    display: flex; justify-content: center;
+    color: gray;
+   margin-top: 20px;
+    font-size: 100px;font-weight: bold;
+
+}
+.cityCondition{
+    display: flex; justify-content: center;
+}
+#cityName{
+    /* margin-right: 50px; */
+}
+#cityName, #condition{
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: gray;
+}
+#condition{
+ margin-left: 40px;
+}
+.cento{
+    display: flex;
+justify-content: center ;
+color: gray;
+font-size: 20px;
+}
+.cento1{
+    margin-top: 20px;
+    /* margin-right: 300px; */
+}
+#humidity, #wind, #visibility{
+    margin-top: 10px;
+}
