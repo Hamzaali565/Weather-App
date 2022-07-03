@@ -38,7 +38,7 @@
             if (Number(input1)) {
                 alert('Please Enter a Valid City Name')
             }
-            axios.get(`http://api.weatherapi.com/v1/current.json?key=ecfc6eab7b3c493a9a1194300223006&q=${input1}`)
+            axios.get(`https://api.weatherapi.com/v1/current.json?key=ecfc6eab7b3c493a9a1194300223006&q=${input1}`)
                 .then(function (response) {
                     console.log(response.data);
                     // handle success
